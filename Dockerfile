@@ -4,11 +4,13 @@ WORKDIR /app
 
 COPY pubspec.* /app
 
-RUN dart pub get 
+RUN dart pub get
 
 COPY . /app/
 
 RUN dart pub get --offline --no-precompile
+
+RUN dart pub global activate conduit
 
 WORKDIR /app
 EXPOSE 80

@@ -57,7 +57,7 @@ class AppService extends ApplicationChannel {
   PersistentStore _initDatabase() {
     final username = Platform.environment['DB_USERNAME'] ?? 'postgres';
     final password = Platform.environment['DB_PASSWORD'] ?? '123';
-    final host = Platform.environment['DB_HOST'] ?? 'localhost';
+    final host = Platform.environment['DB_HOST'] ?? 'postgres_database';
     final port = int.parse(Platform.environment['DB_PORT'] ?? '5432');
     final databaseName = Platform.environment['DB_NAME'] ?? 'finance';
 
